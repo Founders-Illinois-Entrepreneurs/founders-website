@@ -1,0 +1,68 @@
+import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
+import "./globals.css";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+import { site } from "@/content/site";
+
+const bebas = localFont({
+  src: "./fonts/BebasNeue-Regular.ttf",
+  weight: "400",
+  variable: "--font-bebas",
+  display: "swap",
+});
+
+const montserrat = localFont({
+  src: "./fonts/Montserrat-VariableFont_wght.ttf",
+  weight: "100 900",
+  variable: "--font-montserrat",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(`https://${site.domain}`),
+  title: {
+    default: "Founders | Illinois Entrepreneurs",
+    template: "%s | Founders",
+  },
+  description:
+    "Founders is the student entrepreneurship club at the University of Illinois Urbana-Champaign. Every major, every year, every stage of building.",
+  icons: {
+    icon: [
+      { url: "/images/favicon/favicon.ico?v=2", sizes: "any" },
+      { url: "/images/favicon/favicon-32.png?v=2", type: "image/png", sizes: "32x32" },
+      { url: "/images/favicon/favicon-16.png?v=2", type: "image/png", sizes: "16x16" },
+    ],
+    apple: "/images/favicon/apple-touch-icon.png?v=2",
+  },
+  openGraph: {
+    title: "Founders | Illinois Entrepreneurs",
+    description: "The student entrepreneurship club at UIUC.",
+    url: `https://${site.domain}`,
+    siteName: "Founders",
+    images: ["/images/logos/founders-logo.png"],
+    type: "website",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#ffffff",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className={`${bebas.variable} ${montserrat.variable}`}>
+      <body>
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
+        <SiteHeader />
+        <main id="main">{children}</main>
+        <SiteFooter />
+      </body>
+    </html>
+  );
+}
