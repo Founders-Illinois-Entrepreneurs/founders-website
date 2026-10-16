@@ -1,0 +1,272 @@
+[
+  {
+    "name": "Vaanathi Chonachalam",
+    "team": "exec",
+    "role": "President",
+    "photo": "/members/vaanathi.jpg"
+  },
+  {
+    "name": "Will Garrett",
+    "team": "exec",
+    "role": "Vice President",
+    "photo": "/members/will.jpg"
+  },
+  {
+    "name": "Prineet Parhar",
+    "team": "exec",
+    "role": "Treasurer",
+    "photo": "/members/prineet.jpg"
+  },
+  {
+    "name": "Raahil Parikh",
+    "team": "exec",
+    "role": "Head of Events",
+    "photo": "/members/raahil.jpg"
+  },
+  {
+    "name": "Surya Chhabra",
+    "team": "exec",
+    "role": "Head of Exploration",
+    "photo": "/members/surya.jpg"
+  },
+  {
+    "name": "Lena Li",
+    "team": "exec",
+    "role": "Head of Community",
+    "photo": "/members/lena.jpg"
+  },
+  {
+    "name": "Varun Madhan",
+    "team": "exec",
+    "role": "Head of R&D",
+    "photo": "/members/varun.jpg"
+  },
+  {
+    "name": "Zoe Hanson",
+    "team": "exec",
+    "role": "Social Chair",
+    "photo": "/members/zoe_h.jpeg"
+  },
+  {
+    "name": "Raahil Parikh",
+    "team": "events",
+    "role": "Head of Events",
+    "photo": "/members/raahil.jpg"
+  },
+  {
+    "name": "Aayan Verma",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/aayan.jpg"
+  },
+  {
+    "name": "Aditya Rangi",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/aditya.jpg"
+  },
+  {
+    "name": "Zuyu Liu",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/zuyu.jpg"
+  },
+  {
+    "name": "Neha Panyala",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/neha.jpg"
+  },
+  {
+    "name": "Siddhu Bhumpelli",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/siddhu.jpg"
+  },
+  {
+    "name": "Sri Balaji",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/sri.jpeg"
+  },
+  {
+    "name": "Prisha Khona",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/prisha.jpeg"
+  },
+  {
+    "name": "Jimmy Shivak",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/jimmy.jpg"
+  },
+  {
+    "name": "Zoe Zhang",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/zoe.jpg"
+  },
+  {
+    "name": "Surya Chhabra",
+    "team": "exploration",
+    "role": "Head of Exploration",
+    "photo": "/members/surya.jpg"
+  },
+  {
+    "name": "Cole Phillips",
+    "team": "exploration",
+    "role": "Member",
+    "photo": "/members/cole.jpg"
+  },
+  {
+    "name": "Arjun Marwah",
+    "team": "exploration",
+    "role": "Member",
+    "photo": "/members/arjun.jpg"
+  },
+  {
+    "name": "Dev Sharma",
+    "team": "exploration",
+    "role": "Member",
+    "photo": "/members/dev.jpeg"
+  },
+  {
+    "name": "Sai Dorasani",
+    "team": "exploration",
+    "role": "Member",
+    "photo": "/members/sai.jpeg"
+  },
+  {
+    "name": "Pranav Adya",
+    "team": "exploration",
+    "role": "Member",
+    "photo": null
+  },
+  {
+    "name": "Lena Li",
+    "team": "community",
+    "role": "Head of Community",
+    "photo": "/members/lena.jpg"
+  },
+  {
+    "name": "Jocelyn Sung",
+    "team": "community",
+    "role": "Member",
+    "photo": "/members/jocelyn.jpg"
+  },
+  {
+    "name": "Jiya Soni",
+    "team": "community",
+    "role": "Member",
+    "photo": "/members/jiya.jpeg"
+  },
+  {
+    "name": "Medha Vemparala",
+    "team": "community",
+    "role": "Member",
+    "photo": "/members/medha.jpeg"
+  },
+  {
+    "name": "Aastha Parikh",
+    "team": "community",
+    "role": "Member",
+    "photo": null
+  },
+  {
+    "name": "Veer Patel",
+    "team": "community",
+    "role": "Member",
+    "photo": null
+  },
+  {
+    "name": "Alex Zhang",
+    "team": "community",
+    "role": "Member",
+    "photo": null
+  },
+  {
+    "name": "Varun Madhan",
+    "team": "rd",
+    "role": "Head of R&D",
+    "photo": "/members/varun.jpg"
+  },
+  {
+    "name": "Kavya Sachdeva",
+    "team": "rd",
+    "role": "Project Lead",
+    "photo": "/members/kavya.jpg"
+  },
+  {
+    "name": "Ojas Shah",
+    "team": "rd",
+    "role": "Project Lead",
+    "photo": "/members/ojas.jpeg"
+  },
+  {
+    "name": "Rishi Mulchandani",
+    "team": "rd",
+    "role": "Project Lead",
+    "photo": "/members/rishi.jpg"
+  },
+  {
+    "name": "Nalin Kundu",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/nalin.jpg"
+  },
+  {
+    "name": "Dilan Choksi",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/dilan.jpg"
+  },
+  {
+    "name": "Antigoni Garbis",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/antigoni.jpg"
+  },
+  {
+    "name": "Anika Taneja",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/anika.jpg"
+  },
+  {
+    "name": "Sriya Burra",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/sriya.jpg"
+  },
+  {
+    "name": "Rushil Yavasani",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/rushil.jpg"
+  },
+  {
+    "name": "Shrishant Hattarki",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/shrishant.jpg"
+  },
+  {
+    "name": "Renee George",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/renee.jpg"
+  },
+  {
+    "name": "Kushal Trivedi",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/kushal.jpg"
+  },
+  {
+    "name": "Amey Gupta",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/amey.jpg"
+  }
+]
