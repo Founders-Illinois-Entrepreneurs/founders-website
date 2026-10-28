@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Founders",
   },
   description:
-    "Founders is the student entrepreneurship club at the University of Illinois Urbana-Champaign. Every major, every year, every stage of building.",
+    "Founders is the student entrepreneurship organization at the University of Illinois Urbana-Champaign. Every major, every year, every stage of building.",
   icons: {
     icon: [
       { url: "/images/favicon/favicon.ico?v=2", sizes: "any" },
@@ -36,13 +36,21 @@ export const metadata: Metadata = {
     ],
     apple: "/images/favicon/apple-touch-icon.png?v=2",
   },
+  // Link preview card (iMessage, Slack, LinkedIn, Discord...). Image: public/images/og.jpg, 1200x630.
   openGraph: {
     title: "Founders | Illinois Entrepreneurs",
-    description: "The student entrepreneurship club at UIUC.",
+    description: "The student entrepreneurship organization at the University of Illinois Urbana-Champaign.",
     url: `https://${site.domain}`,
     siteName: "Founders",
-    images: ["/images/logos/founders-logo.png"],
+    images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "Founders: Illinois Entrepreneurs logo" }],
     type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Founders | Illinois Entrepreneurs",
+    description: "The student entrepreneurship organization at the University of Illinois Urbana-Champaign.",
+    images: ["/images/og.jpg"],
   },
 };
 
