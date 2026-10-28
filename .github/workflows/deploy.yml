@@ -36,7 +36,9 @@ jobs:
         if: failure()
         shell: bash
         run: |
-          tail -n 40 build.log | sed -e 's/%/%25/g' | while IFS= read -r line; do echo "::error::${line}"; done
+          # GitHub keeps only a few annotations per step, so send the output as one multi-line message.
+          msg=$(grep -v "PackFileCacheStrategy\|^<w>" build.log | tail -n 60 | sed -e 's/%/%25/g' | awk '{printf "%s%%0A", $0}')
+          echo "::error title=Build output::${msg}"
       - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main'
         with:
