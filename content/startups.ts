@@ -14,21 +14,22 @@ export type Startup = {
 
 export const startups: Startup[] = [
   {
-    name: "[TODO: startup name]",
-    oneLiner: "[TODO: one line on what it does]",
-    founders: ["[TODO: founder names]"],
-    todo: true,
+    name: "Rewind",
+    tag: "R&D · Fall 2026",
+    oneLiner: "A lecture video sifter: AI finds the exact timestamps where a concept was covered in class.",
+    founders: ["Renee George", "Akshay Pespunuri"],
   },
   {
-    name: "[TODO: startup name]",
-    oneLiner: "[TODO: one line on what it does]",
-    founders: ["[TODO: founder names]"],
-    todo: true,
+    name: "Archean Interns",
+    tag: "R&D · Fall 2026",
+    oneLiner: "Neural network replication.",
+    founders: ["Justin Horton", "Shrishant Hattarki", "Lily Jia", "Avik Solanki", "Faisal Almugaiteeb"],
   },
   {
-    name: "[TODO: startup name]",
-    oneLiner: "[TODO: one line on what it does]",
-    founders: ["[TODO: founder names]"],
-    todo: true,
+    name: "Nod",
+    tag: "R&D · Fall 2026",
+    oneLiner:
+      "Predicts whether a doctor's office's insurance claim will be approved and helps perfect it, cutting denials so patients get their medication on time.",
+    founders: ["Aadhavan Sridharan", "Kushal Trivedi", "Kaashish Venkataramanan", "Aritro Bhattacharjee", "Dev Dhooper"],
   },
 ];

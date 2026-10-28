@@ -1,272 +1,289 @@
 [
   {
-    "name": "Vaanathi Chonachalam",
+    "name": "Zuyu Liu",
     "team": "exec",
     "role": "President",
-    "photo": "/members/vaanathi.jpg"
+    "photo": "/members/zuyu_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/zuyu-liu-58b2b2241/"
   },
   {
-    "name": "Will Garrett",
+    "name": "Ojas Shah",
     "team": "exec",
     "role": "Vice President",
-    "photo": "/members/will.jpg"
+    "photo": "/members/ojas_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/odsgrad1/"
   },
   {
-    "name": "Prineet Parhar",
+    "name": "Srihari Balaji",
     "team": "exec",
     "role": "Treasurer",
-    "photo": "/members/prineet.jpg"
+    "photo": "/members/srihari_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/sriharibalaji/"
   },
   {
-    "name": "Raahil Parikh",
-    "team": "exec",
-    "role": "Head of Events",
-    "photo": "/members/raahil.jpg"
-  },
-  {
-    "name": "Surya Chhabra",
-    "team": "exec",
-    "role": "Head of Exploration",
-    "photo": "/members/surya.jpg"
-  },
-  {
-    "name": "Lena Li",
-    "team": "exec",
-    "role": "Head of Community",
-    "photo": "/members/lena.jpg"
-  },
-  {
-    "name": "Varun Madhan",
+    "name": "Amey Gupta",
     "team": "exec",
     "role": "Head of R&D",
-    "photo": "/members/varun.jpg"
+    "photo": "/members/amey_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/ameygupt/"
   },
   {
-    "name": "Zoe Hanson",
+    "name": "Cole Phillips",
     "team": "exec",
-    "role": "Social Chair",
-    "photo": "/members/zoe_h.jpeg"
+    "role": "Head of Exploration",
+    "photo": "/members/cole_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/cole-phillips-712402284/"
   },
   {
-    "name": "Raahil Parikh",
+    "name": "Thuc Nguyen",
+    "team": "exec",
+    "role": "Head of Events",
+    "photo": "/members/thuc_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/thuc-n-81a294351/"
+  },
+  {
+    "name": "Aastha Parikh",
+    "team": "exec",
+    "role": "Head of Community",
+    "photo": "/members/aastha_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/aasthanparikh/"
+  },
+  {
+    "name": "Thuc Nguyen",
     "team": "events",
     "role": "Head of Events",
-    "photo": "/members/raahil.jpg"
-  },
-  {
-    "name": "Aayan Verma",
-    "team": "events",
-    "role": "Member",
-    "photo": "/members/aayan.jpg"
-  },
-  {
-    "name": "Aditya Rangi",
-    "team": "events",
-    "role": "Member",
-    "photo": "/members/aditya.jpg"
-  },
-  {
-    "name": "Zuyu Liu",
-    "team": "events",
-    "role": "Member",
-    "photo": "/members/zuyu.jpg"
-  },
-  {
-    "name": "Neha Panyala",
-    "team": "events",
-    "role": "Member",
-    "photo": "/members/neha.jpg"
-  },
-  {
-    "name": "Siddhu Bhumpelli",
-    "team": "events",
-    "role": "Member",
-    "photo": "/members/siddhu.jpg"
-  },
-  {
-    "name": "Sri Balaji",
-    "team": "events",
-    "role": "Member",
-    "photo": "/members/sri.jpeg"
-  },
-  {
-    "name": "Prisha Khona",
-    "team": "events",
-    "role": "Member",
-    "photo": "/members/prisha.jpeg"
-  },
-  {
-    "name": "Jimmy Shivak",
-    "team": "events",
-    "role": "Member",
-    "photo": "/members/jimmy.jpg"
-  },
-  {
-    "name": "Zoe Zhang",
-    "team": "events",
-    "role": "Member",
-    "photo": "/members/zoe.jpg"
-  },
-  {
-    "name": "Surya Chhabra",
-    "team": "exploration",
-    "role": "Head of Exploration",
-    "photo": "/members/surya.jpg"
+    "photo": "/members/thuc_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/thuc-n-81a294351/"
   },
   {
     "name": "Cole Phillips",
     "team": "exploration",
-    "role": "Member",
-    "photo": "/members/cole.jpg"
+    "role": "Head of Exploration",
+    "photo": "/members/cole_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/cole-phillips-712402284/"
   },
   {
-    "name": "Arjun Marwah",
+    "name": "Richa Chhadwa",
     "team": "exploration",
     "role": "Member",
-    "photo": "/members/arjun.jpg"
+    "photo": "/members/richa_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/richa-chhadwa-8164543ab/"
   },
   {
-    "name": "Dev Sharma",
+    "name": "Rehan Hashim",
     "team": "exploration",
     "role": "Member",
-    "photo": "/members/dev.jpeg"
+    "photo": "/members/rehan_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/rehan-hashim-b86544276/"
   },
   {
-    "name": "Sai Dorasani",
+    "name": "Ashwin Priyadarshi",
     "team": "exploration",
     "role": "Member",
-    "photo": "/members/sai.jpeg"
+    "photo": "/members/ashwin_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/ashwinpriyadarshi/"
   },
   {
-    "name": "Pranav Adya",
+    "name": "Riya Shenoy",
     "team": "exploration",
     "role": "Member",
-    "photo": null
+    "photo": "/members/riya_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/riya-shenoy-a8323b282/"
   },
   {
-    "name": "Lena Li",
-    "team": "community",
-    "role": "Head of Community",
-    "photo": "/members/lena.jpg"
-  },
-  {
-    "name": "Jocelyn Sung",
-    "team": "community",
+    "name": "Rhea Shah",
+    "team": "exploration",
     "role": "Member",
-    "photo": "/members/jocelyn.jpg"
-  },
-  {
-    "name": "Jiya Soni",
-    "team": "community",
-    "role": "Member",
-    "photo": "/members/jiya.jpeg"
-  },
-  {
-    "name": "Medha Vemparala",
-    "team": "community",
-    "role": "Member",
-    "photo": "/members/medha.jpeg"
+    "photo": "/members/rhea_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/rheatshah/"
   },
   {
     "name": "Aastha Parikh",
     "team": "community",
-    "role": "Member",
-    "photo": null
+    "role": "Head of Community",
+    "photo": "/members/aastha_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/aasthanparikh/"
   },
   {
-    "name": "Veer Patel",
+    "name": "Hashim Hassan",
     "team": "community",
     "role": "Member",
-    "photo": null
+    "photo": "/members/hashim_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/hashimhassan/"
   },
   {
-    "name": "Alex Zhang",
+    "name": "Jake Mensching",
     "team": "community",
     "role": "Member",
-    "photo": null
+    "photo": "/members/jake_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/jake-mensching-uiuc"
   },
   {
-    "name": "Varun Madhan",
+    "name": "Ruhie Shah",
+    "team": "community",
+    "role": "Member",
+    "photo": "/members/ruhie_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/ruhie-shah-844266332/"
+  },
+  {
+    "name": "Lamya Hussain",
+    "team": "community",
+    "role": "Member",
+    "photo": "/members/lamya_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/lamya-hussain13/"
+  },
+  {
+    "name": "Howard Lu",
+    "team": "community",
+    "role": "Member",
+    "photo": "/members/howard_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/howard-lu7/"
+  },
+  {
+    "name": "Neha Panyala",
+    "team": "community",
+    "role": "Member",
+    "photo": "/members/neha.jpg",
+    "linkedin": "https://www.linkedin.com/in/nehapanyala/"
+  },
+  {
+    "name": "Deeya Patel",
+    "team": "community",
+    "role": "Member",
+    "photo": "/members/deeya_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/deeyapatel2/"
+  },
+  {
+    "name": "Amey Gupta",
     "team": "rd",
     "role": "Head of R&D",
-    "photo": "/members/varun.jpg"
-  },
-  {
-    "name": "Kavya Sachdeva",
-    "team": "rd",
-    "role": "Project Lead",
-    "photo": "/members/kavya.jpg"
-  },
-  {
-    "name": "Ojas Shah",
-    "team": "rd",
-    "role": "Project Lead",
-    "photo": "/members/ojas.jpeg"
-  },
-  {
-    "name": "Rishi Mulchandani",
-    "team": "rd",
-    "role": "Project Lead",
-    "photo": "/members/rishi.jpg"
-  },
-  {
-    "name": "Nalin Kundu",
-    "team": "rd",
-    "role": "Member",
-    "photo": "/members/nalin.jpg"
-  },
-  {
-    "name": "Dilan Choksi",
-    "team": "rd",
-    "role": "Member",
-    "photo": "/members/dilan.jpg"
-  },
-  {
-    "name": "Antigoni Garbis",
-    "team": "rd",
-    "role": "Member",
-    "photo": "/members/antigoni.jpg"
-  },
-  {
-    "name": "Anika Taneja",
-    "team": "rd",
-    "role": "Member",
-    "photo": "/members/anika.jpg"
-  },
-  {
-    "name": "Sriya Burra",
-    "team": "rd",
-    "role": "Member",
-    "photo": "/members/sriya.jpg"
-  },
-  {
-    "name": "Rushil Yavasani",
-    "team": "rd",
-    "role": "Member",
-    "photo": "/members/rushil.jpg"
-  },
-  {
-    "name": "Shrishant Hattarki",
-    "team": "rd",
-    "role": "Member",
-    "photo": "/members/shrishant.jpg"
+    "photo": "/members/amey_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/ameygupt/"
   },
   {
     "name": "Renee George",
     "team": "rd",
+    "role": "Project Lead",
+    "photo": "/members/renee.jpg",
+    "linkedin": "https://www.linkedin.com/in/renee-tanya-george/"
+  },
+  {
+    "name": "Akshay Pespunuri",
+    "team": "rd",
     "role": "Member",
-    "photo": "/members/renee.jpg"
+    "photo": "/members/akshay_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/akshay-pespunuri/"
+  },
+  {
+    "name": "Aadhavan Sridharan",
+    "team": "rd",
+    "role": "Project Lead",
+    "photo": "/members/aadhavan_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/aadhavansridharan/"
   },
   {
     "name": "Kushal Trivedi",
     "team": "rd",
     "role": "Member",
-    "photo": "/members/kushal.jpg"
+    "photo": "/members/kushal.jpg",
+    "linkedin": "https://www.linkedin.com/in/kushaltrivedi31/"
   },
   {
-    "name": "Amey Gupta",
+    "name": "Kaashish Venkataramanan",
     "team": "rd",
     "role": "Member",
-    "photo": "/members/amey.jpg"
+    "photo": "/members/kaashish_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/kaashishvenkat/"
+  },
+  {
+    "name": "Aritro Bhattacharjee",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/aritro_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/aritro-bhattacharjee-2a4790274/"
+  },
+  {
+    "name": "Dev Dhooper",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/dev_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/dev-dhooper-4b7b47282/"
+  },
+  {
+    "name": "Justin Horton",
+    "team": "rd",
+    "role": "Project Lead",
+    "photo": "/members/justin_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/justhort/"
+  },
+  {
+    "name": "Shrishant Hattarki",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/shrishant.jpg",
+    "linkedin": "https://www.linkedin.com/in/shrishanth/"
+  },
+  {
+    "name": "Lily Jia",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/lily_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/lily-jia-99bb46275/"
+  },
+  {
+    "name": "Avik Solanki",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/avik_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/avik-s/"
+  },
+  {
+    "name": "Faisal Almugaiteeb",
+    "team": "rd",
+    "role": "Member",
+    "photo": "/members/faisal_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/faisal-almugaiteeb-598342244/"
+  },
+  {
+    "name": "Diya Jain",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/diya_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/diyajain9/"
+  },
+  {
+    "name": "Prisha Khona",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/prisha.jpeg",
+    "linkedin": "https://www.linkedin.com/in/prisha-khona/"
+  },
+  {
+    "name": "Jimmy Shivak",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/jimmy_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/james-shivak/"
+  },
+  {
+    "name": "Nicholas Ufeli",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/nicholas_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/nicholas-ufeli/"
+  },
+  {
+    "name": "Zoe Zhang",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/zoe_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/zoezhiyuzhang/"
+  },
+  {
+    "name": "Saurav Koduri",
+    "team": "events",
+    "role": "Member",
+    "photo": "/members/saurav_2026.jpg",
+    "linkedin": "https://www.linkedin.com/in/saurav-koduri-b188b6383/"
   }
 ]

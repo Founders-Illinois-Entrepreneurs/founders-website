@@ -1,10 +1,9 @@
-name: Deploy to GitHub Pages
+name: Build and deploy
 
-# Builds the Next.js static export and publishes it to GitHub Pages.
-# Only runs on pushes to main (or when started by hand), so work on other branches never goes live.
+# Every push builds the site, so a broken build shows up as a red X on that branch.
+# Only pushes to main are published to GitHub Pages (foundersillinois.org), so other branches never go live.
 on:
   push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -13,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -24,14 +23,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci
+      # No lockfile yet, so install from package.json (versions there are pinned exactly).
+      - run: npm install --no-audit --no-fund
+      - run: npm run typecheck
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
+        if: github.ref == 'refs/heads/main'
         with:
           path: out
 
   deploy:
+    if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     environment:

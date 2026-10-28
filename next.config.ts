@@ -1,11 +1,10 @@
 import type { NextConfig } from "next";
 
-// Static export for GitHub Pages on the custom domain foundersillinois.org.
-// The site is served from the domain root, so no basePath or assetPrefix is needed.
+// Static export, published to GitHub Pages at foundersillinois.org (see .github/workflows/deploy.yml).
+// Pages are written as "forge.html"-style files, so old links like /forge.html keep working.
 const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
-  // Keep "events.html"-style files so old links like /forge.html and /teams.html keep working.
   trailingSlash: false,
   reactStrictMode: true,
 };

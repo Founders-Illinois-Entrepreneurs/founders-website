@@ -4,7 +4,7 @@ export const forge = {
   edition: "Forge 2026",
   dates: "March 28-29, 2026",
   location: "Chicago",
-  applyUrl: null as string | null, // [TODO: add the Forge application link]
+  applyUrl: null as string | null, // Paste the Forge application link here when it exists; the Apply button shows up automatically.
   pitch:
     "The Midwest's largest student-run startup weekend. Meet VCs, founders and top student startups, pitch for prizes, go to workshops, and leave with a sharper idea.",
 

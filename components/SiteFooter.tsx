@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { nav, site } from "@/content/site";
+import NewsletterSignup from "./NewsletterSignup";
+import { SecretTapTarget } from "./EasterEgg";
 
 export default function SiteFooter() {
   return (
@@ -8,11 +10,16 @@ export default function SiteFooter() {
         <div className="site-footer__grid">
           <div>
             <p className="site-footer__big">
-              Go build<span>.</span>
+              <SecretTapTarget>
+                Go build<span>.</span>
+              </SecretTapTarget>
             </p>
             <p style={{ margin: 0, color: "rgba(255,255,255,0.75)", maxWidth: "40ch" }}>
-              Founders is the student entrepreneurship club at the University of Illinois Urbana-Champaign.
+              Founders is the student entrepreneurship organization at the University of Illinois Urbana-Champaign.
             </p>
+            <div style={{ marginTop: 20 }}>
+              <NewsletterSignup tone="dark" label={site.newsletter.name} />
+            </div>
           </div>
           <div>
             <h2>Explore</h2>
@@ -26,7 +33,7 @@ export default function SiteFooter() {
                 <Link href="/forge">Forge</Link>
               </li>
               <li>
-                <Link href="/join">Join</Link>
+                <Link href="/apply">Apply</Link>
               </li>
             </ul>
           </div>

@@ -23,11 +23,13 @@ export default function ForgePage() {
             <span className="chip">{forge.location}</span>
           </div>
           <p className="lede">{forge.pitch}</p>
-          <div className="btn-row">
-            <ApplyButton label="Apply to Forge" url={forge.applyUrl} />
-          </div>
-          <p className="todo" style={{ justifySelf: "start" }}>
-            [TODO: Forge 2026 has passed. Add the 2026 recap/winners or the 2027 dates.]
+          {forge.applyUrl && (
+            <div className="btn-row">
+              <ApplyButton label="Apply to Forge" url={forge.applyUrl} />
+            </div>
+          )}
+          <p className="tag" style={{ justifySelf: "start", margin: 0 }}>
+            Forge 2027 dates coming soon. Follow us on Instagram to hear first.
           </p>
         </div>
       </section>

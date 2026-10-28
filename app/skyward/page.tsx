@@ -1,30 +1,18 @@
+// Skyward was retired. The old /skyward link (and skyward.html) now sends people to the home page.
 import type { Metadata } from "next";
-import PageHead from "@/components/PageHead";
-import { skyward } from "@/content/media";
+import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Skyward",
-  description: "Skyward is our series highlighting standout founders, companies and ideas from the Founders community.",
-};
+export const metadata: Metadata = { title: "Moved", robots: { index: false } };
 
-export default function SkywardPage() {
+export default function SkywardRedirect() {
   return (
     <>
-      <PageHead tag="Skyward" title={<>Sky<span style={{ color: "var(--orange)" }}>ward</span></>}>
-        Our series on standout founders, companies and ideas from the community. Pick an edition.
-      </PageHead>
-      <section className="wrap" style={{ paddingBottom: "clamp(56px, 9vw, 112px)" }}>
-        <ul className="index-list">
-          {skyward.map((s, i) => (
-            <li key={s.url}>
-              <a href={s.url} target="_blank" rel="noopener noreferrer">
-                <span className="index-list__n">Vol. {i + 1}</span>
-                <span className="index-list__title">{s.title}</span>
-                <span className="index-list__go">Read on Substack ↗</span>
-              </a>
-            </li>
-          ))}
-        </ul>
+      <meta httpEquiv="refresh" content="0; url=/" />
+      <section className="wrap page-head">
+        <span className="tag">Moved</span>
+        <p className="lede">
+          This page is gone. <Link className="text-link" href="/">Head to the home page →</Link>
+        </p>
       </section>
     </>
   );

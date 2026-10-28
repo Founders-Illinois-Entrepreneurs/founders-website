@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import EasterEgg from "@/components/EasterEgg";
 import { site } from "@/content/site";
 
 const bebas = localFont({
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
+        <EasterEgg />
       </body>
     </html>
   );

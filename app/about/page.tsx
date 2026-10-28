@@ -24,14 +24,18 @@ export default function AboutPage() {
             building your next venture, Founders is here for every step.
           </p>
         </div>
-        <div className="grid-3">
+        <div className="grid-2x2">
           {teams
             .filter((t) => t.id !== "exec")
             .map((t) => (
-              <Link key={t.id} href="/team" className="card">
+              <Link key={t.id} href={`/about/${t.id}`} className="card">
                 {t.icon && <img src={t.icon} alt="" style={{ width: 64, height: 64, objectFit: "contain" }} loading="lazy" />}
                 <h2 className="card__title">{t.name}</h2>
                 <p className="card__body">{t.blurb}</p>
+                <div className="card__foot">
+                  <span>Initiatives</span>
+                  <span aria-hidden="true">→</span>
+                </div>
               </Link>
             ))}
         </div>

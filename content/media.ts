@@ -61,5 +61,17 @@ export const communityPhotos = [
   "/images/photos/carousel_5.jpg",
   "/images/photos/photo_row_1.jpg",
   "/images/photos/photo_row_2.jpg",
-  "/images/photos/photo_row_3.jpg",
+];
+
+// Photos in the homepage hero slideshow, in order. Add, remove or reorder freely.
+export const heroSlides = [
+  { src: "/images/photos/54_fall2026_1.jpg", event: "54", caption: "54: Soar to New Heights" },
+  { src: "/images/photos/54_fall2026_3.jpg", event: "54", caption: "Kamion (YC S22) at 54" },
+  { src: "/images/photos/forge_photo1.jpeg", event: "Forge", caption: "Forge, Chicago" },
+  { src: "/images/photos/54_fall2026_2.jpg", event: "54", caption: "Teams building at 54" },
+  { src: "/images/photos/forge_photo2.jpg", event: "Forge", caption: "Forge, Chicago" },
+  { src: "/images/photos/54_fall2026_4.jpg", event: "54", caption: "A packed room at 54" },
+  { src: "/images/photos/carousel_1.jpg", event: "Community", caption: "The Founders community" },
+  { src: "/images/photos/forge_photo3.jpg", event: "Forge", caption: "Forge, Chicago" },
+  { src: "/images/photos/carousel_2.jpg", event: "Community", caption: "The Founders community" },
 ];

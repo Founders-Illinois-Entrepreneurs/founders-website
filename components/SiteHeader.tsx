@@ -42,14 +42,21 @@ export default function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <Link href="/join" aria-current={isActive("/join") ? "page" : undefined}>
-              Join
+            <Link href="/newsletter" className="site-nav__mobile-only" aria-current={isActive("/newsletter") ? "page" : undefined}>
+              Newsletter
             </Link>
           </div>
         </nav>
 
         <div className="site-header__actions">
-          <Link href="/join" className="btn btn--orange btn--sm">
+          <Link
+            href="/newsletter"
+            className="btn btn--orange btn--sm site-header__newsletter"
+            aria-current={isActive("/newsletter") ? "page" : undefined}
+          >
+            Newsletter
+          </Link>
+          <Link href="/apply" className="btn btn--ghost btn--sm" aria-current={isActive("/apply") ? "page" : undefined}>
             Apply
           </Link>
           <button

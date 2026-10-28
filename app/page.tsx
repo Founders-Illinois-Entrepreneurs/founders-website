@@ -1,18 +1,20 @@
 import Link from "next/link";
-import MajorsSphere from "@/components/MajorsSphere";
+import HeroSlideshow from "@/components/HeroSlideshow";
+import HeroHeadline from "@/components/HeroHeadline";
 import StatCounter from "@/components/StatCounter";
-import BlockToy from "@/components/BlockToy";
-import ApplyButton from "@/components/ApplyButton";
-import { stats } from "@/content/site";
+import { site, stats } from "@/content/site";
+import NewsletterSignup from "@/components/NewsletterSignup";
+import RunwayGame from "@/components/RunwayGame";
+import ContactForm from "@/components/ContactForm";
 import { events } from "@/content/events";
 import { currentSponsors, pastSponsors, communityPhotos } from "@/content/media";
 
 const doors = [
-  { href: "/events", n: "Events", title: "Events", body: "54, Forge, speakers and workshops. Where to show up next.", primary: false },
-  { href: "/join", n: "Join", title: "Apply", body: "How to get involved, plus the newsletter.", primary: true },
+  { href: "/events", n: "Events", title: "Events", body: "54, Forge, speakers and workshops. What's coming up.", primary: true },
+  { href: "/forge", n: "Forge", title: "Forge", body: "The Midwest's largest student-run startup weekend.", primary: false },
   { href: "/team", n: "Team", title: "The team", body: "The people running Founders this semester.", primary: false },
   { href: "/startups", n: "Startups", title: "Startups", body: "Companies built by Founders members.", primary: false },
-  { href: "/skyward", n: "Skyward", title: "Skyward", body: "Our series on standout founders and ideas.", primary: false },
+  { href: "/newsletter", n: "Newsletter", title: "Newsletter", body: "This Week at UIUC Founders, in your inbox.", primary: false },
   { href: "/podcast", n: "Podcast", title: "Podcast", body: "Conversations with builders from our community.", primary: false },
 ];
 
@@ -21,36 +23,28 @@ export default function Home() {
 
   return (
     <>
-      {/* ---------- hero ---------- */}
-      <section className="hero">
+      {/* Hero: event photos crossfade behind the headline. Photos live in heroSlides in content/media.ts. */}
+      <section className="hero hero--photo">
+        <HeroSlideshow variant="background" />
         <div className="wrap hero__grid">
           <div className="hero__copy">
-            <span className="tag">Founders · Illinois Entrepreneurs · UIUC</span>
-            <h1 className="display display--xl hero__title">
-              <span className="line">Every major.</span>
-              <span className="line line--outline">Every idea.</span>
-              <span className="line line--orange">Build it anyway.</span>
-            </h1>
+            <HeroHeadline />
             <p className="lede">
-              Founders is the student entrepreneurship club at Illinois. We help students at every step,
-              from a half-formed idea to a pitch in front of real judges.
+              Founders is the student entrepreneurship organization at Illinois. We help students at every step, from a
+              half-formed idea to a pitch in front of real judges.
             </p>
             <div className="btn-row">
-              <Link href="/join" className="btn btn--orange">
-                Join Founders <span className="arrow" aria-hidden="true">→</span>
+              <Link href="/events" className="btn btn--orange">
+                See events <span className="arrow" aria-hidden="true">→</span>
               </Link>
-              <Link href="/events" className="btn btn--ghost">
-                See events
+              <Link href="/team" className="btn btn--ghost">
+                Meet the team
               </Link>
             </div>
-          </div>
-          <div className="hero__sphere">
-            <MajorsSphere />
           </div>
         </div>
       </section>
 
-      {/* ---------- stats ---------- */}
       <section className="band-ink section--tight" aria-label="Founders by the numbers">
         <div className="wrap">
           <div className="stats">
@@ -66,27 +60,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- what we are ---------- */}
+      <section className="section--tight" style={{ background: "var(--orange-soft)", borderBottom: "2px solid var(--ink)" }}>
+        <div className="wrap newsletter-strip">
+          <div style={{ display: "grid", gap: 8, minWidth: 0 }}>
+            <span className="tag">Newsletter</span>
+            <h2 className="display display--sm">{site.newsletter.name}</h2>
+            <p className="card__body">What&apos;s happening in Founders, in your inbox.</p>
+          </div>
+          <NewsletterSignup />
+        </div>
+      </section>
+
       <section className="section">
         <div className="wrap" style={{ display: "grid", gap: 28 }}>
           <span className="tag">What Founders is</span>
           <p className="display display--lg" style={{ maxWidth: "18ch" }}>
-            A club for people who&apos;d rather <span className="hl">try it</span> than talk about it.
+            An org for people who&apos;d rather <span className="hl">try it</span> than talk about it.
           </p>
           <div className="grid-2">
             <p className="lede">
-              Engineers, designers, finance people, psych majors and the undeclared. If you want to build
-              something, you belong here, whether it&apos;s your first idea or your third startup.
+              Founders is a selective community of student builders. Members come from every corner of campus:
+              engineering, finance, design and psych.
             </p>
             <p className="lede">
-              We run hackathons, a startup weekend in Chicago, workshops and mentorship, and we keep the
-              community tight enough that people actually show up for each other.
+              We run hackathons, a startup weekend in Chicago, workshops and mentorship, and we keep the community tight
+              enough that people actually show up for each other.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ---------- doors ---------- */}
       <section className="section band-paper" style={{ borderBlock: "2px solid var(--ink)" }}>
         <div className="wrap">
           <div className="section-head">
@@ -110,7 +113,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- flagship events ---------- */}
       <section className="section">
         <div className="wrap">
           <div className="section-head">
@@ -128,7 +130,7 @@ export default function Home() {
             {flagships.map((e) => (
               <article className="flagship" key={e.slug}>
                 <div className="flagship__media">
-                  {e.photos?.map((p) => (
+                  {e.photos?.slice(0, 3).map((p) => (
                     <img key={p} className="flagship__photo" src={p} alt="" loading="lazy" />
                   ))}
                   {e.logo && <img className="flagship__logo" src={e.logo} alt={`${e.name} logo`} loading="lazy" />}
@@ -153,39 +155,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- toy ---------- */}
-      <section className="section--tight">
-        <div className="wrap" style={{ display: "grid", gap: 18 }}>
-          <div className="section-head__row">
-            <div style={{ display: "grid", gap: 10 }}>
-              <span className="tag tag--blue">Playground</span>
-              <h2 className="display display--sm">Every startup starts as a pile of blocks.</h2>
-            </div>
+      <section className="section band-paper" style={{ borderBlock: "2px solid var(--ink)" }}>
+        <div className="wrap runway-row">
+          <div style={{ display: "grid", gap: 12, alignContent: "start" }}>
+            <span className="tag tag--blue">Play</span>
+            <h2 className="display display--lg">Runway</h2>
+            <p className="lede">
+              Twelve months, a pile of hard calls, and three things that can kill your startup. How long can you last?
+            </p>
           </div>
-          <BlockToy />
+          <RunwayGame />
         </div>
       </section>
 
-      {/* ---------- community ---------- */}
       <section className="section">
         <div className="wrap" style={{ display: "grid", gap: 22 }}>
           <span className="tag">Community</span>
           <h2 className="display display--md" style={{ maxWidth: "16ch" }}>
-            Work hard. Play hard. Show up for each other.
+            Play hard. Work harder. Show up for each other.
           </h2>
           <p className="lede">
-            Founders is known for its tight-knit culture. Joining means becoming part of a family that works
-            hard and plays hard.
+            Founders is known for its tight-knit culture. Members become part of a family that works hard and plays hard.
           </p>
           <div className="strip" tabIndex={0} aria-label="Community photos, scroll sideways">
             {communityPhotos.map((p) => (
-              <img key={p} src={p} alt="Founders members at a club event" loading="lazy" />
+              <img key={p} src={p} alt="Founders members at an organization event" loading="lazy" />
             ))}
           </div>
         </div>
       </section>
 
-      {/* ---------- sponsors ---------- */}
       <section className="section band-paper" style={{ borderTop: "2px solid var(--ink)" }}>
         <div className="wrap" style={{ display: "grid", gap: 40 }}>
           <div style={{ display: "grid", gap: 18 }}>
@@ -213,20 +212,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- CTA ---------- */}
       <section className="section band-blue">
-        <div className="wrap" style={{ display: "grid", gap: 24 }}>
-          <span className="tag">Your move</span>
-          <h2 className="display display--lg" style={{ maxWidth: "14ch" }}>
-            Got an idea? Or just curious?
-          </h2>
-          <p className="lede">Both count. Apply to join, or get the newsletter and see what we&apos;re up to.</p>
-          <div className="btn-row">
-            <ApplyButton label="Apply to Founders" />
-            <Link href="/join" className="btn btn--ghost">
-              Get the newsletter
-            </Link>
+        <div className="wrap contact-grid">
+          <div style={{ display: "grid", gap: 24, alignContent: "start" }}>
+            <span className="tag">Contact us</span>
+            <h2 className="display display--lg" style={{ maxWidth: "14ch" }}>
+              Get in touch.
+            </h2>
+            <p className="lede">
+              Questions about Founders, our events, or working with us? Send us a message and we&apos;ll get back to you.
+            </p>
+            <div className="btn-row">
+              {site.socials.map((x) => (
+                <a key={x.label} className="btn btn--ghost" href={x.href} target="_blank" rel="noopener noreferrer">
+                  {x.label} ↗
+                </a>
+              ))}
+            </div>
+            <p style={{ margin: 0, fontFamily: "var(--font-mono)" }}>{site.email}</p>
           </div>
+          <ContactForm />
         </div>
       </section>
     </>

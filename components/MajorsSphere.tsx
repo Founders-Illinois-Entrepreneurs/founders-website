@@ -8,24 +8,22 @@
  *  - tap or click a major to pull it forward (it turns orange and is announced)
  *  - "Pick one for me" and the arrow keys do the same without a mouse
  *  - pauses when scrolled offscreen or when the tab is hidden
- *  - with reduced motion (or no WebGL) it becomes a static list of majors
+ *  - looks and moves the same on every device; only if WebGL is unavailable does it fall back to a list
  */
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { majors } from "@/content/media";
-import useReducedMotion from "./useReducedMotion";
 
 type Api = { pick: (i: number | null) => void; nudge: (dx: number, dy: number) => void };
 
 export default function MajorsSphere() {
-  const reduced = useReducedMotion();
   const hostRef = useRef<HTMLDivElement>(null);
   const apiRef = useRef<Api | null>(null);
   const [picked, setPicked] = useState<number | null>(null);
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
-    if (reduced || failed) return;
+    if (failed) return;
     const host = hostRef.current;
     if (!host) return;
 
@@ -35,6 +33,7 @@ export default function MajorsSphere() {
     (async () => {
       const THREE = await import("three");
       if (disposed) return;
+      if (!THREE.WebGLRenderer) throw new Error("three.js not available");
 
       // Test for WebGL before building anything.
       const probe = document.createElement("canvas");
@@ -122,8 +121,8 @@ export default function MajorsSphere() {
       let rotX = -0.25;
       let rotY = 0;
       let velX = 0;
-      let velY = 0.0035; // idle drift
-      const IDLE = 0.0035;
+      const IDLE = 0.0035; // same gentle spin on every device
+      let velY = IDLE; // idle drift
       let dragging = false;
       let lastX = 0;
       let lastY = 0;
@@ -287,13 +286,16 @@ export default function MajorsSphere() {
         renderer.domElement.remove();
         apiRef.current = null;
       };
-    })();
+    })().catch(() => {
+      // Anything goes wrong building the globe: show the plain list instead of an empty circle.
+      if (!disposed) setFailed(true);
+    });
 
     return () => {
       disposed = true;
       cleanup();
     };
-  }, [reduced, failed]);
+  }, [failed]);
 
   const pickRandom = useCallback(() => {
     let i = Math.floor(Math.random() * majors.length);
@@ -330,7 +332,7 @@ export default function MajorsSphere() {
     </div>
   );
 
-  if (reduced || failed) {
+  if (failed) {
     return (
       <figure style={{ margin: 0 }}>
         <div className="sphere__fallback">

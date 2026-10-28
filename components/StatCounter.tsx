@@ -1,18 +1,16 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import useReducedMotion from "./useReducedMotion";
 
 /** Counts up to `value` the first time it scrolls into view. Shows the final number before JS runs. */
 export default function StatCounter({ value, suffix = "" }: { value: number; suffix?: string }) {
-  const reduced = useReducedMotion();
   const ref = useRef<HTMLSpanElement>(null);
   const [shown, setShown] = useState(value);
   const done = useRef(false);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el || reduced || done.current) return;
+    if (!el || done.current) return;
     const io = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting || done.current) return;
@@ -32,7 +30,7 @@ export default function StatCounter({ value, suffix = "" }: { value: number; suf
     );
     io.observe(el);
     return () => io.disconnect();
-  }, [value, reduced]);
+  }, [value]);
 
   return (
     <span ref={ref}>

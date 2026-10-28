@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { team, teams, type TeamId } from "@/content/teams";
 
 const initials = (name: string) =>
@@ -13,6 +13,18 @@ const initials = (name: string) =>
 
 export default function TeamBrowser() {
   const [active, setActive] = useState<TeamId>("exec");
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  // A link like /team#community opens the People page on that subteam and scrolls to it.
+  useEffect(() => {
+    const want = (window.location.hash.split("#").pop() || "").toLowerCase();
+    const match = teams.find((t) => t.id === want);
+    if (!match || !rootRef.current) return;
+    setActive(match.id);
+    const el = rootRef.current;
+    const t = window.setTimeout(() => el.scrollIntoView({ behavior: "auto", block: "start" }), 60);
+    return () => window.clearTimeout(t);
+  }, []);
   const current = teams.find((t) => t.id === active)!;
   // Leads first (anyone whose role isn't plain "Member"), then everyone else in file order.
   const members = team
@@ -20,7 +32,7 @@ export default function TeamBrowser() {
     .sort((a, b) => Number(a.role === "Member") - Number(b.role === "Member"));
 
   return (
-    <div>
+    <div ref={rootRef} style={{ scrollMarginTop: 96 }}>
       <div className="filters" role="group" aria-label="Choose a team">
         {teams.map((t) => (
           <button
@@ -43,13 +55,21 @@ export default function TeamBrowser() {
           <p className="lede">{current.blurb}</p>
         </div>
         {current.groupPhoto ? (
-          <img className="team-intro__photo" src={current.groupPhoto} alt={`The ${current.name} team`} loading="lazy" />
+          <img
+            className="team-intro__photo"
+            src={current.groupPhoto}
+            alt={`The ${current.name} team`}
+            loading="lazy"
+            style={current.photoPosition ? { objectPosition: current.photoPosition } : undefined}
+          />
         ) : (
           <div className="team-intro__photo team-intro__photo--todo">
             <span className="todo">[TODO: add {current.name} group photo]</span>
           </div>
         )}
       </div>
+
+      {members.some((m) => m.linkedin) && <p className="people-hint">Click a name to see their LinkedIn.</p>}
 
       <ul className="people" aria-label={`${current.name} team members`} style={{ listStyle: "none", margin: 0, padding: 0 }}>
         {members.map((m) => (
@@ -64,7 +84,16 @@ export default function TeamBrowser() {
                 </div>
               )}
             </div>
-            <div className="person__name">{m.name}</div>
+            <div className="person__name">
+              {m.linkedin ? (
+                <a href={m.linkedin} target="_blank" rel="noopener noreferrer" className="person__link">
+                  {m.name}
+                  <span className="sr-only"> on LinkedIn (opens in a new tab)</span>
+                </a>
+              ) : (
+                m.name
+              )}
+            </div>
             <div className="person__role">{m.role}</div>
           </li>
         ))}
