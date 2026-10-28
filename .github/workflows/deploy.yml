@@ -26,7 +26,17 @@ jobs:
       # No lockfile yet, so install from package.json (versions there are pinned exactly).
       - run: npm install --no-audit --no-fund
       - run: npm run typecheck
-      - run: npm run build
+      - name: Build
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee build.log
+      # If the build breaks, surface the end of its output as annotations on the run summary.
+      - name: Report build errors
+        if: failure()
+        shell: bash
+        run: |
+          tail -n 40 build.log | sed -e 's/%/%25/g' | while IFS= read -r line; do echo "::error::${line}"; done
       - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main'
         with:
