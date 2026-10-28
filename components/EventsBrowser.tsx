@@ -4,20 +4,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { events, kindLabels, type EventKind, type FoundersEvent } from "@/content/events";
 import AddToCalendar from "./AddToCalendar";
+import { formatDates } from "./formatDates";
 
 type Filter = "all" | EventKind;
-
-export function formatDates(e: FoundersEvent) {
-  if (!e.start) return e.dateLabel || null;
-  const opts: Intl.DateTimeFormatOptions = { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" };
-  const a = new Date(`${e.start}T00:00:00Z`);
-  if (!e.end || e.end === e.start) return a.toLocaleDateString("en-US", opts);
-  const b = new Date(`${e.end}T00:00:00Z`);
-  const sameMonth = a.getUTCMonth() === b.getUTCMonth() && a.getUTCFullYear() === b.getUTCFullYear();
-  return sameMonth
-    ? `${a.toLocaleDateString("en-US", { month: "short", timeZone: "UTC" })} ${a.getUTCDate()}-${b.getUTCDate()}, ${b.getUTCFullYear()}`
-    : `${a.toLocaleDateString("en-US", opts)} - ${b.toLocaleDateString("en-US", opts)}`;
-}
 
 /** "upcoming" | "past" | "tbd", decided in the visitor's browser so it never goes stale. */
 function useWhen() {

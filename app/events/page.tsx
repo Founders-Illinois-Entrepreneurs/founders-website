@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHead from "@/components/PageHead";
-import EventsBrowser, { formatDates } from "@/components/EventsBrowser";
+import EventsBrowser from "@/components/EventsBrowser";
+import { formatDates } from "@/components/formatDates";
 import { events } from "@/content/events";
 import InstagramNote from "@/components/InstagramNote";
 import NewsletterButton from "@/components/NewsletterButton";
