@@ -2,6 +2,8 @@
 
 Source for https://foundersillinois.org. Built with Next.js (App Router, TypeScript) as a static site and hosted on GitHub Pages.
 
+Owned by the [Founders: Illinois Entrepreneurs](https://github.com/Founders-Illinois-Entrepreneurs) GitHub org. The org page explains roles, how to join, and how sites are run.
+
 ## Updating the site (no coding needed for most changes)
 
 Almost everything on the site comes from the files in `content/`. Edit the file, save, and push to `main`. GitHub rebuilds and publishes it in a couple of minutes.
@@ -39,7 +41,7 @@ npm run typecheck
 ## Hosting
 
 - **GitHub Pages:** every push to `main` builds the site and publishes it to foundersillinois.org (`.github/workflows/deploy.yml`). In the repo, Settings > Pages > Source must be set to **GitHub Actions**.
-- **Other branches** are built too (a red X on the commit means the build broke) but never go live. Do work on a branch, then merge into `main` when it's ready.
+- **Other branches** are built too (a red X on the commit means the build broke) but never go live.
 - **Domain:** `public/CNAME` holds foundersillinois.org. The domain's DNS points at GitHub Pages; keep the registrar account renewed.
 - **Old links:** `/forge.html`-style URLs still work, and `/teams` and `/skyward` forward to their new pages.
 
@@ -50,3 +52,18 @@ npm run typecheck
 - `content/`: the editable data described above.
 - `public/`: images, member photos and the favicon.
 - `legacy/`: the old hand-written HTML site, kept for reference only. It isn't deployed.
+
+## Making a change
+
+1. Make a branch, commit, and push. The build runs on your branch.
+2. Open a pull request into `main`.
+3. Someone from the `founders-website-maintainers` or `exec` team approves it (they're listed in `.github/CODEOWNERS`), and the build must pass.
+4. Merge. The site updates in a couple of minutes.
+
+The repo is public: never commit passwords, API keys, or members' personal details beyond what the site already shows.
+
+## Credits
+
+Thank you to everyone who built the site. If you contributed, add yourself here in your pull request. A LinkedIn link is optional.
+
+- **Jake Mensching** ([GitHub](https://github.com/jakemensching)): the site's redesign and the content system in `content/`.
