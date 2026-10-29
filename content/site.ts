@@ -24,7 +24,7 @@ export const site = {
   applicationsOpen: false,
 
   // "Remind me when applications open" Google Form ("Spring 27 Founders Application Reminder").
-  // It's embedded right on the Apply page, so people sign up without leaving the site.
+  // The Apply page's "Remind me" button opens it in a new tab.
   // Responses land in the form's Google Sheet. Swap formId to use a different form.
   reminderForm: {
     formId: "1FAIpQLSdTGmcAyLfxnzn4rbinOs8mqjTpGGtdyGN-TwrNhodZ0gsKjQ" as string | null,

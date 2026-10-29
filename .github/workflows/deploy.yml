@@ -2,14 +2,15 @@ name: Build and deploy
 
 # Every push builds the site, so a broken build shows up as a red X on that branch.
 # Only pushes to main are published to GitHub Pages (foundersillinois.org), so other branches never go live.
+# Pull requests are built too, so the required "build" check also runs for pull requests from forks.
 on:
   push:
+  pull_request:
   workflow_dispatch:
 
+# Builds only read the repo. Publishing permissions are given to the deploy job alone.
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages-${{ github.ref }}
@@ -48,6 +49,9 @@ jobs:
     if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

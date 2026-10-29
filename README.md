@@ -45,7 +45,7 @@ npm run typecheck
 - **GitHub Pages:** every push to `main` builds the site and publishes it to foundersillinois.org (`.github/workflows/deploy.yml`). In the repo, Settings > Pages > Source must be set to **GitHub Actions**.
 - **Other branches** are built too (a red X on the commit means the build broke) but never go live.
 - **Domain:** `public/CNAME` holds foundersillinois.org. The domain's DNS points at GitHub Pages; keep the registrar account renewed.
-- **Old links:** `/forge.html`-style URLs still work, and `/teams` and `/skyward` forward to their new pages.
+- **Old links:** `/forge.html`-style URLs still work, `/teams` forwards to the People page, and `/skyward` goes to the home page.
 
 ## Folder map
 
