@@ -6,7 +6,9 @@ Owned by the [Founders: Illinois Entrepreneurs](https://github.com/Founders-Illi
 
 ## Updating the site (no coding needed for most changes)
 
-Almost everything on the site comes from the files in `content/`. Edit the file, save, and push to `main`. GitHub rebuilds and publishes it in a couple of minutes.
+Almost everything on the site comes from the files in `content/`. Edit the file and open a pull request (see [Making a change](#making-a-change)). Once it's approved and merged, GitHub rebuilds and publishes the site in a couple of minutes.
+
+Small text edits can be made right on github.com: open the file, click the pencil, and choose **Propose changes**. GitHub makes the branch and pull request for you.
 
 | To change… | Edit |
 | --- | --- |
