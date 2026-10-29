@@ -66,6 +66,6 @@ The repo is public: never commit passwords, API keys, or members' personal detai
 
 ## Credits
 
-Thank you to everyone who built the site. If you contributed, add yourself here in your pull request. A LinkedIn link is optional.
+Thank you to everyone who built the site. If you contributed, add yourself here in your pull request, with a link to your GitHub profile.
 
 - **Jake Mensching** ([GitHub](https://github.com/jakemensching)): the site's redesign and the content system in `content/`.
